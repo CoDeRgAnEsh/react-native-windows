@@ -61,6 +61,7 @@ App::App() noexcept {
 /// <param name="e">Details about the launch request and process.</param>
 void App::OnLaunched(LaunchActivatedEventArgs const &e) {
   super::OnLaunched(e);
+  Home rootNavigator = Window::Current().Content().as<Router>();
   Frame rootFrame = Window::Current().Content().as<Frame>();
   rootFrame.Navigate(xaml_typename<MainPage>(), box_value(e.Arguments()));
 }
