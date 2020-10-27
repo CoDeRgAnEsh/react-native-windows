@@ -14,6 +14,7 @@ using namespace xaml;
 namespace winrt::SampleAppCpp::implementation {
 MainPage::MainPage() {
   InitializeComponent();
+  ReactRootNavigation().Home();
   ReactRootView().ReactNativeHost(Application::Current().as<App>()->Host());
 }
 
